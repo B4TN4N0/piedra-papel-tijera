@@ -26,17 +26,17 @@ class Game:
         self.defeat = GameResult.Defeat
         self.tie = GameResult.Tie
 
+
     def assess_game(self, user_action, computer_action):
         if user_action == computer_action:
             return self.tie
-        elif (user_action == self.rock and computer_action == self.scissors) or \
-            (user_action == self.paper and computer_action == self.rock) or \
-            (user_action == self.scissors and computer_action == self.paper):
-            return self.victory
-        elif (user_action == self.lizard and computer_action == self.spock) or \
-            (user_action == self.spock and computer_action == self.rock):
-            return self.victory
-        else:
-            return self.defeat
 
-    
+        wins = {
+            self.rock: {self.scissors, self.lizard},
+            self.paper: {self.rock, self.spock},
+            self.scissors: {self.paper, self.lizard},
+            self.lizard: {self.spock, self.paper},
+            self.spock: {self.scissors, self.rock},
+        }
+
+        return self.victory if computer_action in wins.get(user_action, set()) else self.defeat
