@@ -1,6 +1,7 @@
 import pytest
-from src.RPS_basic import GameResult, GameAction, assess_game
+from src.RPS_poo import GameAction, GameResult, RPSGame
 
+assess_game = RPSGame().assess_game
 @pytest.mark.draw
 def test_draw():
     '''
