@@ -153,16 +153,16 @@ def test_scissors_wins(game):
 
 
 
-#@pytest.mark.actions
-#def test_minus_action():
-#    '''
-#    GameActions EnumType behaviour
-#    '''
-#    assert 1 == len(GameAction.minus(
-#        GameAction.Scissors,
-#        GameAction.Lizard,
-#        GameAction.Paper,
-#        GameAction.Rock))
-#    assert 4 == len(GameAction.minus(GameAction.Lizard))
-#    assert GameAction.Lizard not in GameAction.minus(GameAction.Lizard)
-#    assert GameAction.Lizard in GameAction.minus(GameAction.Spock, GameAction.Rock)
+@pytest.mark.actions
+def test_minus_action():
+    '''
+    GameActions EnumType behaviour
+    '''
+    assert  1 == len(GameAction.minus(
+        GameAction.Scissors,
+        GameAction.Lizard,
+        GameAction.Paper,
+        GameAction.Rock))
+    assert 4 == len(GameAction.minus(GameAction.Lizard))
+    assert GameAction.Lizard not in GameAction.minus(GameAction.Lizard)
+    assert GameAction.Lizard in GameAction.minus(GameAction.Spock, GameAction.Rock)
