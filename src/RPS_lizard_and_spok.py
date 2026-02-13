@@ -1,11 +1,15 @@
 from enum import Enum
 
 class GameAction(Enum):
-    Rock = "rock"
-    Paper = "paper"
-    Scissors = "scissors"
-    Lizard = "lizard"
-    Spock = "spock"
+    Rock = "rock" #0
+    Paper = "paper" #1
+    Scissors = "scissors" #2
+    Lizard = "lizard" #3
+    Spock = "spock" #4
+
+    @classmethod
+    def minus(cls, *actions):
+        return set(cls) - set(actions) # devuelve las acciones que no están en el conjunto de acciones (todas menos las especificadas)
 
 class GameResult:
     Victory = "victory"
