@@ -1,5 +1,8 @@
 {
     "conventionalCommits.scopes": [
-        "rps"
+        "rps",
+        "rock",
+        "paper",
+        "scissors"
     ]
 }

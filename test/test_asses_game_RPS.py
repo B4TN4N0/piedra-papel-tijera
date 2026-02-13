@@ -56,20 +56,20 @@ def test_paper_wins():
         user_action=GameAction.Rock,
         computer_action=GameAction.Paper)
 
-#@pytest.mark.scissors
-#def test_scissors_loses():
-#    '''
-#    Scissors pierde con Rock 
-#    '''
-#    assert GameResult.Victory == assess_game(
-#        user_action=GameAction.Rock,
-#        computer_action=GameAction.Scissors)
-#
-#@pytest.mark.scissors
-#def test_scissors_wins():
-#    '''
-#    Scissors gana a Paper 
-#    '''
-#    assert GameResult.Defeat == assess_game(
-#        user_action=GameAction.Paper,
-#        computer_action=GameAction.Scissors)
+@pytest.mark.scissors
+def test_scissors_loses():
+    '''
+    Scissors pierde con Rock 
+    '''
+    assert GameResult.Victory == assess_game(
+        user_action=GameAction.Rock,
+        computer_action=GameAction.Scissors)
+
+@pytest.mark.scissors
+def test_scissors_wins():
+    '''
+    Scissors gana a Paper 
+    '''
+    assert GameResult.Defeat == assess_game(
+        user_action=GameAction.Paper,
+        computer_action=GameAction.Scissors)
