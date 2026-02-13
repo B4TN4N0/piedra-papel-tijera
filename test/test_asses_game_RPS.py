@@ -20,24 +20,24 @@ def test_draw():
         user_action=GameAction.Paper,
         computer_action=GameAction.Paper)
 
-#@pytest.mark.rock
-#def test_rock_loses():
-#    '''
-#    Rock pierde con Paper 
-#    '''
-#    assert GameResult.Victory == assess_game(
-#        user_action=GameAction.Paper,
-#        computer_action=GameAction.Rock)
-#
-#@pytest.mark.rock
-#def test_rock_wins():
-#    '''
-#    Rock gana a Scissors
-#    '''
-#    assert GameResult.Defeat == assess_game(
-#        user_action=GameAction.Scissors,
-#        computer_action=GameAction.Rock)
-#
+@pytest.mark.rock
+def test_rock_loses():
+    '''
+    Rock pierde con Paper 
+    '''
+    assert GameResult.Victory == assess_game(
+        user_action=GameAction.Paper,
+        computer_action=GameAction.Rock)
+
+@pytest.mark.rock
+def test_rock_wins():
+    '''
+    Rock gana a Scissors
+    '''
+    assert GameResult.Defeat == assess_game(
+        user_action=GameAction.Scissors,
+        computer_action=GameAction.Rock)
+
 #@pytest.mark.paper
 #def test_paper_loses():
 #    '''
